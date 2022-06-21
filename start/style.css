@@ -1,0 +1,205 @@
+/* Ho svolto l'esercizio in due modalità:
+ quale dei due metodi utilizzati sarebbe più corretto per sviluppare questo tipo di layout? 
+*/
+
+/* *** PRIMO METODO *** */
+
+div.mycalculator div {
+  border: solid 1px rgb(0, 0, 0);
+}
+
+.mycalculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.display {
+  grid-column: 1 / 5;
+  grid-row: 1;
+}
+
+.addizione {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.sottrazione {
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+.motliplicazione {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.divisione {
+  grid-column: 4 / 5;
+  grid-row: 2;
+}
+
+.zero {
+  grid-column: 1 / 2;
+  grid-row: 6;
+}
+
+.uno {
+  grid-column: 1 / 2;
+  grid-row: 5;
+}
+
+.due {
+  grid-column: 2 / 3;
+  grid-row: 5;
+}
+
+.tre {
+  grid-column: 3 / 4;
+  grid-row: 5;
+}
+
+.quattro {
+  grid-column: 1 / 2;
+  grid-row: 4;
+}
+
+.cinque {
+  grid-column: 2 / 3;
+  grid-row: 4;
+}
+
+.sei {
+  grid-column: 3 / 4;
+  grid-row: 4;
+}
+
+.sette {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.otto {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.nove {
+  grid-column: 3 / 4;
+  grid-row: 3;
+}
+
+.decimale {
+  grid-column: 2 / 3;
+  grid-row: 6;
+}
+
+.cancella {
+  grid-column: 3 / 4;
+  grid-row: 6;
+}
+
+.uguale {
+  grid-column: 4 / 5;
+  grid-row: 3/ 7;
+  text-align: center;
+}
+
+/* *** SECONDO METODO *** */
+
+/*
+div.mycalculator div {
+  border: solid 1px rgb(0, 0, 0);
+}
+
+div {
+  text-align: center;
+}
+
+.mycalculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "display display display display"
+    "addizione sottrazione moltiplicazione divisione"
+    "sette otto nove result"
+    "quattro cinque sei result"
+    "uno due tre result"
+    "zero decimale cancel result";
+}
+
+.display {
+  grid-area: display;
+}
+
+.addizione {
+  grid-area: addizione;
+}
+
+.sottrazione {
+  grid-area: sottrazione;
+}
+
+.motliplicazione {
+  grid-area: motliplicazione;
+}
+
+.divisione {
+  grid-area: divisione;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.uno {
+  grid-area: uno;
+}
+
+.due {
+  grid-area: due;
+}
+
+.tre {
+  grid-area: tre;
+}
+
+.quattro {
+  grid-area: quattro;
+}
+
+.cinque {
+  grid-area: cinque;
+}
+
+.sei {
+  grid-area: sei;
+}
+
+.sette {
+  grid-area: sette;
+}
+
+.otto {
+  grid-area: otto;
+}
+
+.nove {
+  grid-area: nove;
+}
+
+.decimale {
+  grid-area: decimale;
+}
+
+.cancella {
+  grid-column: 3 / 4;
+  grid-row: 6;
+}
+
+.uguale {
+  grid-area: result;
+}
+*/
